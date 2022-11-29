@@ -2,7 +2,6 @@
 name: Cole Croteau
 date: 9/19/22
 description: A program that tracks the number of passengers on an airplane, with ways to remove or add passengers depending on whether the plane has taken off or not.
-self-grade: 100%: The input is 1:1 of the sample input provided, the code is organized with no useless code, and there are plenty of comments throughout the code.
  */
 
 import java.util.*;
@@ -237,9 +236,8 @@ class Airplane implements list {
    }
 	
 }
-/* Do not delete the given driver , The class Driver must be in your code when you submit it
-Once you complete all the classes uncommnet the given driver to test your code.*/
-	
+
+//Driver to test the code
 class Driver {
    public static void main(String[]args) {
       Scanner in = new Scanner(System.in);
@@ -298,71 +296,3 @@ class Driver {
    	
    }
 }
-/*Complete the following driver to include the required code.*/
-/*20 points is allocated for this driver*/
-class yourDriver {
-	public static void main(String[] args) {
-		Scanner in = new Scanner(System.in);	
-	    Scanner kb = new Scanner(System.in);
-	   
-		Airplane United = new Airplane(256549);
-		
-		//Creating list of passengers, with a 5th one being added later
-		Passenger p1 = new Passenger("Cole", "Croteau", "5938254364", 1, "First Class", "916-531-7426");
-		Passenger p2 = new Passenger("Amanda", "Dinkleberg", "592168535", 2, "Economy Class", "916-263-8523");
-		Passenger p3 = new Passenger("Davy", "Jones", "634830632", 3, "Business Class", "632-744-8321");
-		Passenger p4 = new Passenger("Becky", "Pen", "932732475", 4, "Business Class", "216-852-8886");
-		//This passenger will be added after take off
-		Passenger p5 = new Passenger("Ronald", "McDonald", "642796445", 5, "First Class", "532-755-3325");
-		
-		//The first four passengers board the plane
-	    United.add(p1);
-	    United.add(p2);
-	    United.add(p3);
-	    United.add(p4);
-	    
-	    //Plane takes off
-	    System.out.println("The plane is about to take off");
-	    United.takeOff();
-	    
-	    //A fifth passenger attempts to board after the plane has taken off
-	    System.out.println("Ronald McDonald is attempting to board the plane after takeoff! He failed...");
-	    United.add(p5);
-	    
-	    //This code repeats until there are no more passengers on board the plane
-	    while(United.getCount() > 0) {  
-	    	System.out.println("Here is the list of the passengers in this plane");
-	        System.out.println("There are " + United.getCount() + " Passengers on this plane"); 
-	        System.out.println(United + "\n");
-	        //Displays the last names of the passengers on the plane
-	        System.out.println("Testing the printLast method to display the last names");
-	        United.printLast();  
-	        System.out.println();   
-	        //Displays the number of passengers on the plane
-	        System.out.println("Testing the static method getCount");
-	        System.out.println("This plane has " + United.getCount() + " Passengers\n");
-	        //Searches for a passenger via their last name on the plane
-	        System.out.print("Enter the last name of the passenger to search for: ");
-	        String lastName = in.nextLine();
-	        System.out.println("\n" + United.search(lastName));
-	        System.out.println("-------");
-	        System.out.println();     
-	        //Throwing a passenger off the plane
-	        System.out.println("Testing the delete method");
-	        System.out.print("Enter the last name of the passenger to be forcefully ejected from the plane: ");
-	        String last = in.nextLine();
-	        United.delete(last);
-	        System.out.println("Passenger " + last + " has been... disposed of\n");
-	        //Showing updated list of passengers
-	        System.out.println("Here is the updated list");
-	        System.out.println(United);
-	        System.out.println("*********************");
-	        //Press any key to repeat this code
-	        System.out.print("Press any key to continue : ");
-	        String repeat = kb.nextLine();
-	     }
-	    //Everyone was forcefully ejected from the plane
-	    System.out.println("No passengers left on the plane, what have you done...");	   	
-	}
-}
- 		    
