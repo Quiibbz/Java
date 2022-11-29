@@ -2,7 +2,6 @@
 name: Cole Croteau
 date: 10/10/22
 description: A program that examines lists and their values. This includes checking if a list is a palindrome, comparing two lists, or converting a list to ascii code.
-self-grade: 100%: The input is 1:1 of the sample input provided, the code is organized with no useless code, and there are plenty of comments throughout the code.
  */
 
 import java.util.*;
@@ -102,6 +101,7 @@ class Recursive {
    } 
 }
 
+//Driver to test the code.
 class Driver {
    public static void main(String [] args) {
       System.out.println("testing the palindrome method");
