@@ -2,7 +2,6 @@
 name: Cole Croteau
 date: 10/10/22
 description: Social Media app that allows you basic social media controls like editing your information, following, and unfollowing others.
-self-grade: 100%: The input is 1:1 of the sample input provided, the code is organized with no useless code, and there are plenty of comments throughout the code.
  */
 
 import java.util.*;
@@ -202,55 +201,7 @@ class SocialMedia{
    }
 }
 
-/* create your own driver here */
-class MyDriver {
-   public static void main(String[] args) {
-	  Scanner input = new Scanner(System.in);
-      SocialMedia myTwitter = new SocialMedia();
-      
-      //Assigning followers
-      myTwitter.follow("Diane", "Roberta", "DiaRo", false);
-      myTwitter.follow("Cameron", "Walty", "CamWa", true);
-      myTwitter.follow("Jeremy", "Price", "JerPri", true);
-      myTwitter.follow("Edith", "Finch", "EdiFi", false);
-      myTwitter.follow("Roberto", "Gonzales", "RobGo", false);
-      
-      //Displaying followers
-      System.out.println("Your followers informations \n");
-      System.out.println(myTwitter);
-      
-      //Following back one of your followers
-      System.out.print("\nInput the username of one of your followers that you'd like to follow back : ");
-      String s = input.next();
-      myTwitter.followBack(s);
-      
-      //Adding a follower
-      System.out.println("\nAbraham Lincoln has decided to follow you!");
-      myTwitter.follow("Abraham", "Lincoln", "AbrLinc", false);
-      
-      //Searching for a follower
-      System.out.println("\nNow searching for Jeremy Price in your followers list...");
-      if(myTwitter.search("Jeremy","Price") == false) {
-    	  System.out.println("Jeremy Price is not in your followers list.");
-      }else {
-    	  System.out.println("Jeremy Price is in your followers list.");
-      }
-      
-      //User unfollows you
-      System.out.println("\nCameron Walty is no longer following you.");
-      myTwitter.remove("Cameron", "Walty");
-      
-      //Displaying the list of followers
-      System.out.println("\nHere is your final list of followers!");
-      System.out.println(myTwitter);
-      
-      //Displays followers and following
-      System.out.println("\n You are being followed by " + myTwitter.followerCounts() + " people.");
-      System.out.println("You are following " + myTwitter.followingCounts() + " people.");
-   }
-}
-
-/*below is a sample driver. Do not remove this driver from your code when submitting it*/
+//Driver to test the code
 class Driver {
 	
    public static void main(String[]args) {
