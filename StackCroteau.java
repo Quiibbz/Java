@@ -2,7 +2,6 @@
 name: Cole Croteau
 date: 10/10/22
 description: A program that takes an expression, converts it into postfix form, and gives the result of the expression.
-self-grade: 100%: The input is 1:1 of the sample input provided, the code is organized with no useless code, and there are plenty of comments throughout the code.
  */
 
 import java.util.*;
@@ -168,7 +167,7 @@ class Expression {
    }
 }
 
-//Test driver to insure my code works properly.
+//Driver to test the code.
 class ExpDrive {
    public static void main(String[] args) {
       String[] exp = new String[11];
@@ -188,34 +187,6 @@ class ExpDrive {
          String post = e1.getPostfix();
          int result = e1.evalPostfix();
          System.out.println("Infix: "+ exp[i] + ",  postfix: " + post + " = " + result);
-      }
-   }
-}
-     
-   
- 
-//My custom driver that uses ArrayList instead of an Array like the given driver. Functions identically to it.
-class YourDriver
-{
-   public static void main(String[] args)
-   {
-      ArrayList <String> exp = new ArrayList<String>();
-      exp.add("5 + 2 - 12 / 2 * 2 + 12 - 6");
-      exp.add("20 - 1 + 7 + 12 / 4 * 3 - 12");
-      exp.add("4 * 2 / 6 * 9 * 2 - 32 + 12");
-      exp.add("42 - 2 + 82 * 2 / 9 - 12 - 4");
-      exp.add("2 * 3 * 6 / 2 - 12 + 22 / 2");
-      exp.add("16 + 9 - 20 * 2 / 7 - 12 - 5");
-      exp.add("12 + 2 + 75 - 45 / 2 * 6 + 9");
-      exp.add("90 - 12 / 6 * 5 - 20 + 60 / 6");
-      exp.add("6 - 12 + 35 / 2 * 3 + 8 - 12");
-      exp.add("62 - 2 - 8 + 12 / 7 * 3 - 16");
-      exp.add("5 + 2 + 8 / 4 * 8 + 4 * 2 - 9");
-      for(int i = 0; i < exp.size(); i++) {
-    	  Expression e1 = new Expression(exp.get(i));
-    	  String post = e1.getPostfix();
-    	  int result = e1.evalPostfix();
-    	  System.out.println("Infix: " + exp.get(i) + ", Postfix: " + post + " = " + result);
       }
    }
 }
