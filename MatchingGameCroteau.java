@@ -2,7 +2,6 @@
 name: Cole Croteau
 date: 9/10/22
 descrition: A numbers matching game that asks the user for a maximum number, then generates three random numbers between 1 and that number. Any matches gives points and gives the final score at the end of the game.
-self-grade: 100%: The input is 1:1 of the sample input provided, the code is organized with no useless code, and there are plenty of comments throughout the code.
 */
 
 import java.util.*;
