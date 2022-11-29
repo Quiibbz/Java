@@ -2,7 +2,6 @@
 name: Cole Croteau
 date: 9/26/22
 description: An emailing program that allows for modifying ever aspect of the email before sending it, as well as forwarding the emails.
-self-grade: 100%: The input is 1:1 of the sample input provided, the code is organized with no useless code, and there are plenty of comments throughout the code.
  */
 
 import java.util.*;
@@ -169,11 +168,8 @@ class Email extends Document {
      }
      
 } 
-
-//****************************************************************************************
-
-//uncommnet this driver class once you have implemented the Documnet class and the Email class  
-     
+  
+//Driver to test the code     
 class EmailDriver {
     // public Email(String text, String sender,String recipiant, String subject, String cc)
     public static void main(String[] args) {
