@@ -2,7 +2,6 @@
 name: Cole Croteau
 date: 9/19/22
 description: A user defined data type called Payroll that organizes the payroll information for any number of employees. Comes complete with different ways to manipulate the information.
-self-grade: 100%: The input is 1:1 of the sample input provided, the code is organized with no useless code, and there are plenty of comments throughout the code.
  */
 public class PayrollCroteau {
 
@@ -88,11 +87,10 @@ class Payroll {
    }
 }
 
-//Class showing example code that uses the Payroll method
+//Driver to test the code
 class PayrollDriver {
   public static void main(String[] args) {
-   
-  //uncommnet  the provided code below
+	  
     System.out.println("Creating payroll objects");
     Payroll p1 = new Payroll("Alex Martinez" ,"123456", 25, 20);
     Payroll p2 = new Payroll("Ali Santos" ,"986747", 125, 45);
@@ -111,56 +109,6 @@ class PayrollDriver {
     System.out.println("\nTesting the setter methods");
     System.out.println("The hourly pay of " + p1.getName()  + " is being changed");
     p1.setHoursWorked(80);  // changing the hours worked for the object p1
-    System.out.println(p1);
-    
-    
-      
-    
-    
-    
-//***********************************************************************************
-
-    //Custom code
-    
-    System.out.println("\n*******************");
-    //1. create two objects of the payroll class
-    Payroll pr1 = new Payroll("Cole Croteau", "251642", 16.75, 32);
-    Payroll pr2 = new Payroll("Amanda Croteau", "268402", 21, 40);
-    
-    //2. display the objects on the screen by calling the toString method
-    System.out.println(pr1.toString());
-    System.out.println("\n*******************");
-    System.out.println(pr2.toString());
-    System.out.println("\n*******************");
-    
-    //2. display the salary of each person by calling the getPay method
-    System.out.println("Cole Croteau's salary is: " + pr1.getPay());
-    System.out.println("Amanda Croteau's salary is: " + pr2.getPay());
-    System.out.println("\n*******************");
-    
-    //change the hourlyRate of the objects you created
-    pr1.setHourlyRate(20);
-    pr2.setHourlyRate(25);
-    
-    //display the objects again to see the changes you made by calling the toString method
-    System.out.println(pr1.toString());
-    System.out.println("\n*******************");
-    System.out.println(pr2.toString());
-    System.out.println("\n*******************");
-    
-    //change the hoursworked for the objects you created by calling the setter methods
-    pr1.setHoursWorked(40);
-    pr2.setHoursWorked(42);
-    //display your objects again to see the changes you made
-    System.out.println(pr1.toString());
-    System.out.println("\n*******************");
-    System.out.println(pr2.toString());
-    System.out.println("\n*******************");
-   
-    //add another code you want
-    pr1.getRaise(9999);
-    System.out.println(pr1.toString());
-    System.out.println("\nI'm rich!");
-    
+    System.out.println(p1);  
   }
 }
