@@ -2,7 +2,6 @@
 name: Cole Croteau
 date: 10/10/22
 description: Grocery app that manages the items in your cart with the ability to add or remove items while keeping the order in which items were added.
-self-grade: 100%: The input is 1:1 of the sample input provided, the code is organized with no useless code, and there are plenty of comments throughout the code.
  */
 
 import java.util.*;
@@ -345,90 +344,7 @@ class GroceryList implements List {
        return leastExpensive;
       }  
    }
-   
-   /*implement your own driver similar to the given driver. DO NOT REMOVE THE GIVEN 
-	DRIVER*/
-   	class yourDriver {
-   		public static void main(String []args) {
-   			Scanner kb = new Scanner(System.in);
-   			GroceryList list = new GroceryList();
-   			
-   			//Adding items to the grocerylist
-   			list.add("Cake", 8.99, "5/02/2023", "8576033941");
-   			list.add("Brownies", 6.99, "3/32/24", "8472019876");
-   			list.add("Bananas", 2.99, "12/02/22", "4217894462");
-   			list.add("Cookie Dough", 7.99, "12/28/22", "0957821634");
-   			
-   			boolean repeat = true;
-   			while(true) {
-   				//Prints the list of items
-   				System.out.println("Here is the list of food items:");
-   				System.out.println(list);
-   				System.out.println("**************************************");
-   				
-   				//Removes something from your list
-   				System.out.println("Seems you don't have enough money to purchase everything on this list...");
-   				boolean removed = false;
-   				while(removed == false) {
-   					System.out.print("Enter the barcode of an item you want to remove from the list: ");
-   					String barcode = kb.next();
-   					Item i = list.remove(barcode);
-   					if (i != null) {
-   						System.out.println(i + " has been removed from the list.");
-   						removed = true;
-   					} else {
-   						System.out.println("That's not an item on the list.");
-   					}
-   				}
-   				System.out.println("**************************************");
-   				
-   				//Adding an item to the list
-   				System.out.println("Oh, you found a $100 bill on the floor. Guess you can afford that now ... oh well");
-   				System.out.print("Enter the information of a new item to add into your shopping cart");
-   				System.out.println("Index must be in the range 0 - " + (list.getSize()-1));
-   				System.out.print("Index --> ");
-   				int index = kb.nextInt(); 
-   				System.out.print("Name --> ");
-   				String name = kb.next();
-   				System.out.print("Price --> ");
-   				double price = kb.nextDouble();
-   				System.out.print("Expiration Date --> ");
-   				String date = kb.next();
-   				System.out.print("Barcode --> " );
-   				String barcode = kb.next();   
-   				list.add(index, name, price, date, barcode);
-   				System.out.println("**************************************");
-   				
-   				//Looking up the most and least expensive items on the list
-   				System.out.println("Hmm, I wonder what the most expensive item on the grocery list is...");
-   				System.out.println("Let's find out! Now displaying the most expensive item on the grocery list:");
-   				System.out.println(list.mostExpensive());
-   				System.out.println("While we are at it, let's find out the least expensive item on the list.");
-   				System.out.println("Now displaying the least expensive item on the grocery list:");
-   				System.out.println(list.leastExpensive());
-   				System.out.println("**************************************");
-   				
-   				//Looking up the description of an item on the list
-   				System.out.println("How about we look up the information of one more item of your choice.");
-   				System.out.println("Please enter the index of an item on the grocery list.");
-   				System.out.println("Index must be in the range 0 - " + (list.getSize()-1));
-   				System.out.print("Index --> ");
-            	index = kb.nextInt();
-            	System.out.println("Here is the item at the index " + index);
-            	System.out.println(list.get(index));
-            	System.out.println("**************************************");
-   			
-            	//Displaying the final list of items
-            	System.out.println("Here is the finalized list of items in the grocery list:");
-            	System.out.println(list);
-            	System.out.println("**************************************");
-            	kb.nextLine();
-            	System.out.println("Press any key to continue");
-            	kb.nextLine();
-   			}
-   		}
-   	}
-   	
+   	//Driver to test the code
    	class Driver {
    		public static void main(String []args) {
    			Scanner kb = new Scanner(System.in);
