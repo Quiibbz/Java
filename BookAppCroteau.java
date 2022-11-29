@@ -2,7 +2,6 @@
 name: Cole Croteau
 date: 10/10/22
 description: Book list app that organizes books in a list via different sorting algorithms, depending on which is used.
-self-grade: 100%: The input is 1:1 of the sample input provided, the code is organized with no useless code, and there are plenty of comments throughout the code.
  */
 
 import java.util.*;
@@ -298,9 +297,7 @@ class BookStore {
    }
 }
 
-/*
-Do not delete this driver. 
-*/
+//Driver to test the code
 class Driver {
    public static void main(String[] args) {
       Scanner kb = new Scanner(System.in);
@@ -372,92 +369,5 @@ class Driver {
          System.out.println("Here is the updated list:");
          System.out.println(myStore);          
       }  
-   }
-}
-   
-//Custom Driver
-class YourDriver {
-   public static void main(String[] args) {
-	   Scanner kb = new Scanner(System.in);
-	   //Created a bookstore object called Borders
-	   BookStore Borders = new BookStore();
-	   //Added 5 books to Borders
-	   Borders.add("Halo: The Master Chief Collection","Ben","Ten",64,"58323621", 353);
-	   Borders.add("Minecraft","Mo", "Jang",50,"4642753",432);
-	   Borders.add("Terraria", "Bojack", "Horseman", 42,"4354322185", 802);
-	   Borders.add("DOOM","Hannah", "Banana",97,"302758453",1006);
-	   Borders.add("Outlast", "Spongebob", "Squarepants", 99, "9839264342", 585);
-	   //While loop holding different activites that modify/view the list of books
-	   boolean b = true;
-	   while(b) {
-		   //List the books
-		   System.out.println("Here is the current list of books in Borders:");
-		   System.out.println(Borders);
-		   
-		   System.out.println("\n     **************     ");
-		   //Search for a book in the list and display it
-	         System.out.print("Enter the title of the book to search for it: ");
-	         String input = kb.nextLine();
-	         
-	         Book book = Borders.binarySearch(input);
-	         if(book != null) {
-	            System.out.println(book);
-	         }else {
-	            System.out.println("That is not a book in the list");
-	         }
-	         
-	         System.out.println("\n     **************     ");
-	         //Adding a book to the list
-	         System.out.println("Enter the information of the book you want to add to the list:");
-	         System.out.print("Title --> ");
-	         String title = kb.nextLine();
-	         System.out.print("First name --> ");
-	         String first = kb.next();
-	         System.out.print("Last name --> ");
-	         String last = kb.next();
-	         System.out.print("Price --> ");
-	         double price = kb.nextDouble();
-	         System.out.print("ISBN --> ");
-	         String isbn = kb.next();
-	         System.out.print("Pages --> ");
-	         int pages = kb.nextInt();
-	         Borders.add(title, first, last, price, isbn, pages);
-	         Borders.selectionSort();
-	         System.out.println("Here is the updated list:");
-	         System.out.println(Borders);    
-	         
-	         System.out.println("\n     **************     ");
-	         //Sorting the list in alternate ways
-	         System.out.println("The list is currently sorted by title, how about we sort them a different way.");
-	         System.out.println("Enter 1 to sort based on the author");
-	         System.out.println("Enter 2 to sort based on the author, and the price");
-	         System.out.print("Enter your choice: ");
-	         int option = kb.nextInt();
-	         System.out.println("\n*************");
-	         if (option == 1) {
-	            System.out.println("Sorted based on the author\n");
-	            Borders.insertionSort();
-	         }else {
-	            System.out.println("Sorted based on the author and price\n");
-	            Borders.bubbleSort();
-	         }  
-	         System.out.println(Borders);
-	         
-	         System.out.println("\n     **************     ");
-	         //Appending pages to a book based on ISBN
-	         kb.nextLine();
-	         System.out.print("Enter the ISBN of a book to append pages to it: ");
-	         String isbn2 = kb.next();
-	         System.out.print("Enter the amount of the pages to append: ");
-	         int pages2 = kb.nextInt();
-	         Book z  = Borders.append(isbn2, pages2);
-	         System.out.println("The " + pages2 + " has been added to the following book");
-	         System.out.println(z);
-	         
-	         System.out.println("\n     **************     ");
-	         //Doing custom method, which reverses the ArrayList of books.
-	         System.out.println("Just because I can, lets reverse the list of books.");
-	         Borders.creativeMethod();
-	   }
    }
 }
