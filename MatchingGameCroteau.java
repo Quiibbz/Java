@@ -31,37 +31,37 @@ public class MatchingGameCroteau {
 	//Module that assigns three random numbers from the getRand module and keeps score based on how many times there is a match among the numbers.
 	public static void play(Random rand) {
 		Scanner kb = new Scanner(System.in);
-        int total = 0;
-        String answer = "";
-        int n1= 0, n2 = 0, n3 = 0;
-        //Asks the user for a max number value to be passed into the getRand method
-        System.out.print("\nEnter the max value to generate a random number: ");
-        int max = kb.nextInt();
-        kb.nextLine();
-        //As long as the user does not input the letter q, three new random numbers are chosen and points are given to the user if there are any matches among the numbers.
-        while(!answer.equalsIgnoreCase("q")) {
-        	n1 = getRand(rand,max);
-        	n2 = getRand(rand,max);
-        	n3 = getRand(rand,max);
-            System.out.println("\nYou got " + n1 + " " + n2 + " " + n3);
-        	int match = match(n1,n2,n3);
-        	if (match == 2) {
-        		total+= 200;
-        		System.out.println("You got two matches, you won 200 dollars");
-        	}   
-        	else if(match == 3) {
-        		total+= 500;
-        		System.out.println("You got three matches, you won 500 dollars");
-        	} else {
-        		System.out.println("Sorry no match");
-        	}  
-        	System.out.print("\nHit enter to continue or press q/Q to quit ");
-    		answer = kb.nextLine();
+        	int total = 0;
+        	String answer = "";
+        	int n1= 0, n2 = 0, n3 = 0;
+        	//Asks the user for a max number value to be passed into the getRand method
+        	System.out.print("\nEnter the max value to generate a random number: ");
+        	int max = kb.nextInt();
+       		kb.nextLine();
+        	//As long as the user does not input the letter q, three new random numbers are chosen and points are given to the user if there are any matches among the numbers.
+        	while(!answer.equalsIgnoreCase("q")) {
+        		n1 = getRand(rand,max);
+        		n2 = getRand(rand,max);
+        		n3 = getRand(rand,max);
+           	System.out.println("\nYou got " + n1 + " " + n2 + " " + n3);
+        		int match = match(n1,n2,n3);
+        		if (match == 2) {
+        			total+= 200;
+        			System.out.println("You got two matches, you won 200 dollars");
+        		}   
+        		else if(match == 3) {
+        			total+= 500;
+        			System.out.println("You got three matches, you won 500 dollars");
+        		} else {
+        			System.out.println("Sorry no match");
+        		}  
+        		System.out.print("\nHit enter to continue or press q/Q to quit ");
+    			answer = kb.nextLine();
        
-        }
-        //If the user inputs the letter q, the method prints the total score of the user, then exits back to the main method.
-        System.out.println("\nTotal amount you won: " + total);
-        System.out.println("\n");    
+        	}
+        	//If the user inputs the letter q, the method prints the total score of the user, then exits back to the main method.
+        	System.out.println("\nTotal amount you won: " + total);
+        	System.out.println("\n");    
 	}
 	//Module that checks which numbers match, and returns either the number 2 (for 2 matching numbers), 3 (for all numbers matching), or 0 (for no matching numbers)
 	public static int match(int n1, int n2, int n3) {
